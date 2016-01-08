@@ -3,5 +3,4 @@ node_modules
 static
 .module-cache
 *.log*
-client_old
-
+client/vendors/

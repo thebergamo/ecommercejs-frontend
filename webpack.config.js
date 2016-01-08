@@ -1,4 +1,4 @@
-const webpack     = require('webpack'),
+const webpack           = require('webpack'),
 	  path              = require('path'),
 	  openBrowserPlugin = require('open-browser-webpack-plugin');
 
@@ -30,7 +30,14 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				loaders: ["style", "css?sourceMap", "sass?sourceMap"]
-			}
+			},
+			{
+				test: /\.css$/,
+				loaders: [
+					'style-loader',
+					'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+				]
+			},
 		]
 	},
 	resolve: {
