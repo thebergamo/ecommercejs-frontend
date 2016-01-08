@@ -5,7 +5,7 @@ import { syncReduxAndRouter } from 'redux-simple-router'
 import ReactDOM from 'react-dom'
 import React from 'react'
 
-import styles from '.vendors/normalize-css/normalize.css'
+import styles from './vendors/normalize-css/normalize.css'
 
 import configure from './store'
 
