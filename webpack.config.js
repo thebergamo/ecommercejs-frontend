@@ -1,5 +1,6 @@
-const webpack = require('webpack'),
-	  path    = require('path')
+const webpack     = require('webpack'),
+	  path              = require('path'),
+	  openBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
 	context: path.join(__dirname, "./client"),
@@ -26,6 +27,10 @@ module.exports = {
 					'babel-loader'
 				]
 			},
+			{
+				test: /\.scss$/,
+				loaders: ["style", "css?sourceMap", "sass?sourceMap"]
+			}
 		]
 	},
 	resolve: {
@@ -35,7 +40,8 @@ module.exports = {
 		new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
 		new webpack.DefinePlugin({
 			'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development') }
-		})
+		}),
+		new openBrowserPlugin({ url: 'http://localhost:3000' })
 	],
 	devServer: {
 		contentBase: './client',
