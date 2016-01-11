@@ -45,6 +45,10 @@ module.exports = {
 					'style-loader',
 					'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
 				]
+			},
+			{
+				test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+				loader: 'url-loader?limit=200000'
 			}
 		]
 	},
