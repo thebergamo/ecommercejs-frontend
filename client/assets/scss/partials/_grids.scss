@@ -15,23 +15,36 @@
     margin-left: -$grid-gutter;
 }
 
+.pull-left{
+	float:left !important;
+}
+
+.pull-right{
+	float:right !important;
+}
+
 [class*='col-'] {
     float: left;
     min-height: 1px; 
-    width: (100 / $grid-count) * 1 + %;
+    width: 100%;
     padding:$grid-gutter
 }
 
 @for $i from 1 through $grid-count{
-	.#{col-lg}-#{$i}{
+	.#{col-xs}-#{$i}{
 		width: (100 / $grid-count) * $i + %; 
 	}
 }
 
-
 @media (min-width: 768px){
 	.container {
 	    width: 750px;
+	}
+
+	@for $i from 1 through $grid-count{
+		.#{col-sm}-#{$i}{
+			width: (100 / $grid-count) * $i + %; 
+		}
 	}	
 }
 
@@ -39,10 +52,22 @@
 	.container {
 	    width: 970px;
 	}
+
+	@for $i from 1 through $grid-count{
+		.#{col-md}-#{$i}{
+			width: (100 / $grid-count) * $i + %; 
+		}
+	}
 }
 
 @media (min-width: 1200px){
 	.container {
 	    width: $grid-width;
+	}
+
+	@for $i from 1 through $grid-count{
+		.#{col-lg}-#{$i}{
+			width: (100 / $grid-count) * $i + %; 
+		}
 	}
 }
