@@ -14,6 +14,14 @@ module.exports = {
 		filename: 'bundle.js'
 	},
 	module: {
+		preLoaders: [
+			{
+				test: /\.js$/,
+				include: path.join(__dirname, 'client'),
+				exclude: /node_modules/,
+				loader: 'eslint-loader'
+			}
+		],
 		loaders: [
 			{
 				test: /\.html$/,
@@ -53,5 +61,8 @@ module.exports = {
 	devServer: {
 		contentBase: './client',
 		hot: true
+	},
+	eslint: {
+		configFile: '.eslintrc'
 	}
 }
