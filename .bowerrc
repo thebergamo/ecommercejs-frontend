@@ -1,6 +1,0 @@
-{
-  "directory": "client/vendors/",
-  "analytics": false,
-  "timeout": 60000,
-  "color": true
-}
