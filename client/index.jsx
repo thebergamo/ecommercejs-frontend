@@ -11,6 +11,8 @@ import Home from './containers/Home'
 import Product from './containers/Product'
 import Category from './containers/Category'
 
+import styles from './assets/scss/main.scss'
+
 const store = configure()
 const history = createHistory()
 
