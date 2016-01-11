@@ -1,4 +1,48 @@
-@media (min-width: 30em) {
-    .row { width: 100%; display: table; table-layout: fixed; }
-    .col { display: table-cell; }
+.container{
+	margin: 0 auto;
+	padding:0 $grid-gutter;
+	width: 100%;
+}
+
+.row:before, .row:after, .container:before, .container:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.row{
+	margin-right: -$grid-gutter;
+    margin-left: -$grid-gutter;
+}
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px; 
+    width: (100 / $grid-count) * 1 + %;
+    padding:$grid-gutter
+}
+
+@for $i from 1 through $grid-count{
+	.#{col-lg}-#{$i}{
+		width: (100 / $grid-count) * $i + %; 
+	}
+}
+
+
+@media (min-width: 768px){
+	.container {
+	    width: 750px;
+	}	
+}
+
+@media (min-width: 992px){
+	.container {
+	    width: 970px;
+	}
+}
+
+@media (min-width: 1200px){
+	.container {
+	    width: $grid-width;
+	}
 }
