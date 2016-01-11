@@ -10,7 +10,10 @@ class Home extends Component {
 		return (
 			<div className="main">
 				<Header />
-				<Footer />
+				<Footer
+					email="help@web.com" 
+					tel="(11)99999-9999" 
+				/>
 			</div>
 		)
 	}

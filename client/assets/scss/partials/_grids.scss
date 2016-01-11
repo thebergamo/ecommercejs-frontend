@@ -27,7 +27,7 @@
     float: left;
     min-height: 1px; 
     width: 100%;
-    padding:$grid-gutter
+    padding:0 $grid-gutter;
 }
 
 @for $i from 1 through $grid-count{
