@@ -14,8 +14,8 @@ class Footer extends Component {
 								<h3>Suporte</h3>
 								<ul>
 									<li><p>Lorem ipsum dolor sit amet, consectetur</p></li>
-									<li><h4><Link to="#"><strong>(11)99999-9999</strong></Link></h4></li>
-									<li><h4><Link to="#">help@web.com</Link></h4></li>
+									<li><h4><Link to="#"><strong><i className="fa fa-phone"></i>(11)99999-9999</strong></Link></h4></li>
+									<li><h4><Link to="#"><i className="fa fa-envelope"></i>help@web.com</Link></h4></li>
 								</ul>
 							</div>
 							<div className="col-lg-2  col-md-2 col-sm-4 col-xs-6">

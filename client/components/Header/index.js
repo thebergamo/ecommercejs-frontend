@@ -17,7 +17,7 @@ class Header extends Component {
 										<ul>
 											<li className="inline-block"><Link to="#">SAC</Link></li>
 											<li className="divider inline-block"></li>
-											<li className="inline-block"><Link to="#">(11)99999-9999</Link></li>
+											<li className="inline-block"><Link to="#"><i className="fa fa-phone"></i>(11)99999-9999</Link></li>
 										</ul>
 									</div>
 								</div>
@@ -36,7 +36,11 @@ class Header extends Component {
 						</div>
 					</div>
 					<div className="container">
-						<div className="row"></div>
+						<div className="row">
+							<div className="col-lg-2 col-sm-6 col-xs-6">
+								<Link to="/"><h1>Ecommerce.js</h1></Link>
+							</div>
+						</div>
 					</div>
 				</div>
 			</header>
