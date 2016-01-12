@@ -1,0 +1,32 @@
+.pull-left{
+	float:left !important;
+}
+
+.pull-right{
+	float:right !important;
+}
+
+.block{
+	display: block;
+}
+
+.inline{
+	display: inline;
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+.clear{
+	clear:both;
+}
+
+.divider{
+	position: relative;
+	min-height: 1px;
+	height: 100%;
+	padding-left:10px;
+	padding-right: 10px;
+
+}

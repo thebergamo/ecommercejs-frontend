@@ -10,56 +10,26 @@ $grid-gutter: 12px;
 @import "partials/buttons";
 @import "partials/figures";
 @import "partials/grids";
+@import "partials/pallete";
 
-
-body{
-	color: #454545;
+.navbar{
+	width: 100%;
+	position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
 }
 
-.footer{
-	background: #f2f2f2;
-    height: auto;
-    padding-bottom: 30px;
-    position: relative;
-    width: 100%;
-    border-bottom: 1px solid #ddd;
-    border-top: 1px solid #DDDDDD;
-
-	h3{
-		border-bottom: 1px solid #DDDDDD;
-		font-size: 18px;
-		font-weight: 700;
-		line-height: 27px;
-		padding: 40px 0 15px;
-		text-transform: uppercase;
-		color: #3a3a3a;
-	}
-
-	a, p{
-		color: #888888;
-	}
-
-	ul{
-		font-size: 13px;
-	    list-style-type: none;
-	    margin-left: 0;
-	    padding-left: 0;
-	    margin-top: 20px;
-	    color: #888888;
-
-		li{
-			a{
-				padding: 0 0 5px 0;
-    			display: block;
-			}
-		}
-	}
+.navbar-fixed-top, .navbar-fixed-bottom{
+	position: fixed;
+	right: 0;
+	left:0;
+	z-index: 1030;
 }
 
-.footer-bottom{
-	background: #e3e3e3;
+.navbar-fixed-top{
+	top:0;
+}
 
-	p.pull-left{
-		padding-top: 6px
-	}
+.navbar-fixed-bottom{
+	bottom:0;
 }
